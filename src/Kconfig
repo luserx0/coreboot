@@ -227,6 +227,12 @@ config UBSAN
 	  say N because it adds a small performance penalty and may abort
 	  on code that happens to work in spite of the UB.
 
+config KASAN
+	bool "Address Space Sanitizer support"
+	help
+	  Instrument the code with checks for address space sanitization.
+
+
 config NO_RELOCATABLE_RAMSTAGE
 	bool
 	default n if ARCH_X86
